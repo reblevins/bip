@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @post.text %>
+  <%= best_in_place @post, :text, :type => :textarea, :cancel_button => 'Cancel', :activator => 'editdesc', :nil => "Click to add some text!" %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
